@@ -7,6 +7,7 @@ app.use(express.json());
 app.use(Cors());
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
+
 app.get('/', (req, res) => res.status(200).send("Hello Programmers"));
 
 app.post('/bfhl', (req, res) => {
