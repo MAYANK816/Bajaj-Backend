@@ -1,4 +1,5 @@
 var express = require('express');
+var Cors = require("Cors")
 var app = express();
 
 app.use(express.json());
