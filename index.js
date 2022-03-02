@@ -1,12 +1,9 @@
 import express from "express";
 import Cors from 'cors';
-import bodyParser from "body-parser";
 const app = express();
 const port = process.env.PORT || 8001;
 app.use(express.json());
 app.use(Cors());
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(bodyParser.json())
 
 app.get('/', (req, res) => res.status(200).send("Hello Programmers"));
 
