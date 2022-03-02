@@ -1,12 +1,11 @@
-var express = require('express');
-var Cors = require("Cors")
-var app = express();
-
+import express from "express";
+import Cors from 'cors';
+const app = express();
+const port = process.env.PORT || 8001;
 app.use(express.json());
 app.use(Cors());
-app.get('/', function (req, res) {
-    res.send('Hello World');
-})
+
+app.get('/', (req, res) => res.status(200).send("Hello Programmers"));
 app.post('/bfhl', (req, res) => {
     const data = [...req.body.data]
 
@@ -23,6 +22,4 @@ app.post('/bfhl', (req, res) => {
     })
 })
 
-app.listen(3001, () => {
-    console.log('server is up on port ' + 3001);
-});
+app.listen(port, () => console.log(`listening :${port}`));
