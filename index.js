@@ -14,9 +14,9 @@ app.post('/bfhl', (req, res) => {
     let alphabets = data.filter((value) => (/[a-zA-Z]/).test(value));
     res.status(200).send({
         'is_success': 'true',
-        'user_id': 'name_dob',
-        'email': 'your email',
-        'roll_number': 'your roll number',
+        'user_id': 'chirag_1910990520',
+        'email': 'chirag0520.cse19@chitkara.edu.in',
+        'roll_number': '1910990520',
         'numbers': numbers,
         'alphabet': alphabets
     })
